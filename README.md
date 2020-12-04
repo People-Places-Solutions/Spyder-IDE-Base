@@ -14,3 +14,16 @@ I created this python environment as an alternative to Anaconda's Spyder install
  4 pip install -r requirements.txt
  ```
  
+ 
+## If you see this error, you need to install visual c++ build tools. 🤢
+![](https://github.com/People-Places-Solutions/Spyder-IDE-Base/blob/main/Capture.PNG)
+
+No worries, just install choco (admin cmd prompt) like so 🍫:
+
+```
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+👇 Then in the same command prompt run 👇:
+```
+    choco install -y vcbuildtools -ia "/Full" -y
+```
